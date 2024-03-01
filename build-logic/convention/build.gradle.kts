@@ -28,7 +28,6 @@ tasks {
 dependencies {
     compileOnly(libs.android.gradlePlugin)
     compileOnly(libs.android.tools.common)
-    compileOnly(libs.firebase.performance.gradlePlugin)
     compileOnly(libs.kotlin.gradlePlugin)
 }
 
@@ -37,14 +36,6 @@ gradlePlugin {
         register("androidLibrary") {
             id = "gradleversioncatalogssample.android.library"
             implementationClass = "AndroidLibraryConventionPlugin"
-        }
-        register("androidLibraryCompose") {
-            id = "gradleversioncatalogssample.android.library.compose"
-            implementationClass = "AndroidLibraryComposeConventionPlugin"
-        }
-        register("androidLint") {
-            id = "gradleversioncatalogssample.android.lint"
-            implementationClass = "AndroidLintConventionPlugin"
         }
     }
 }
